@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>LID</th>
+            <th>NAME</th>
+            <th>TAXBAND</th>
+            <th>SALARYSCALE</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let lecturer of lecturers">
+            <td>{{ lecturer.lid }}</td>
+            <td>{{ lecturer.name }}</td>
+            <td>{{ lecturer.taxBand }}</td>
+            <td>{{ lecturer.salaryScale }}</td>
+            <td>
+                <button (click)="onUpdateButtonClick(lecturer.lid)">Update</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

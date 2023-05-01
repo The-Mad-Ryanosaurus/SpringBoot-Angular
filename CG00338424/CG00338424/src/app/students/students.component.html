@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <tr>
+            <th>SID</th>
+            <th>NAME</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{ student.sid }}</td>
+            <td>{{ student.name }}</td>
+
+            <td>
+                <button (click)="onDeleteButtonClick(student.sid)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
