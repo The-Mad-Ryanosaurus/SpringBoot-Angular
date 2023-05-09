@@ -1,0 +1,21 @@
+<div *ngIf="lecturer">
+    <form (ngSubmit)="onSubmit()" #lecturerForm="ngForm">
+        <div>
+            <label for="lid">LID:</label>
+            <input type="text" id="lid" title="LID Cannot Be Altered!" [(ngModel)]="lecturer.lid" name="lid" disabled>
+        </div>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" [(ngModel)]="lecturer.name" name="name" required>
+        </div>
+        <div>
+            <label for="taxBand">Tax Band:</label>
+            <input type="text" id="taxBand" [(ngModel)]="lecturer.taxBand" name="taxBand" required>
+        </div>
+        <div>
+            <label for="salaryScale">Salary Scale:</label>
+            <input type="text" id="salaryScale" [(ngModel)]="lecturer.salaryScale" name="salaryScale" required>
+        </div>
+        <button type="submit">Update</button>
+    </form>
+</div>
